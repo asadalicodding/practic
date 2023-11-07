@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tech-concepts-d6205": {
+      "hosting": {
+        "practic": [
+          "tech-concepts-d6205"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tech-concepts-d6205"
+  }
+}

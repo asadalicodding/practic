@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practic';
+
+
+    // "dataGroups": [
+  //   {
+  //     "name": "api-call",
+  //     "urls": [
+  //       "https://reqres.in/api/*"
+  //     ],
+  //     "cacheConfig": {
+  //       "maxAge": "5s",
+  //       "maxSize": 10,
+  //       "strategy": "freshness",
+  //       "timeout": "5s"
+  //     }
+  //   }
+  // ]
+
+  
 }

@@ -1,0 +1,33 @@
+<p>firebase-crud works!</p>
+
+<div class="container">
+    <div >
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="formAdd.name">
+        </div>
+
+        <div class="form-group">
+            <label for="mrk">Marks:</label>
+            <input type="text" id="mrk" name="marks" [(ngModel)]="formAdd.marks">
+        </div>
+        <button class="save" type="button" (click)="add()"> save </button>
+    </div>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of data;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.marks}}</td>
+        </tr>
+    </tbody>
+</table>
