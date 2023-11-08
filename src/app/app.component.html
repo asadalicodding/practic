@@ -1,4 +1,25 @@
-<h2>Welcome </h2>
+<!-- <h2>Welcome </h2> -->
 <!-- <app-crud-operation></app-crud-operation> -->
+<!-- <app-firebase-crud></app-firebase-crud> -->
+<div id="app">
+    <!-- Nav Bar -->
+    <ng-container>
+        <nav class="navbar" style="background-color: #29c2f9">
+            <div class="container-fluid justify-content-center">
+                <a class="navbar-brand text-white py-2">Testing</a>
+            </div>
+        </nav>
+        <div class="main mt-5">
+            <router-outlet> </router-outlet>
+        </div>
+    </ng-container>
 
-<app-firebase-crud></app-firebase-crud>
+    <!-- Access Denied -->
+    <!-- <div class="center text-danger" *ngIf="!access">
+        <h1 class="text-center">Access Denied!</h1>
+        <h2 class="text-center ">
+            Sorry, you do not have permission to access this resource.
+        </h2>
+    </div> -->
+
+</div>

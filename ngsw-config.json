@@ -30,14 +30,15 @@
   "dataGroups": [
     {
       "name": "firestore-data",
-      "urls": ["https://tech-concepts-d6205.firestore.nam5.appspot.com/collection1"],
+      "urls": [
+        "https://tech-concepts-d6205.firestore.nam5.appspot.com/testing"
+      ],
       "cacheConfig": {
         "strategy": "freshness",
         "maxSize": 100,
         "maxAge": "7d",
-        "timeout":"5s"
+        "timeout": "5s"
       }
     }
   ]
 }
-

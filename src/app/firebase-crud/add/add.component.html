@@ -1,0 +1,41 @@
+<div class="container">
+    <nav class="mx-2" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add</li>
+        </ol>
+    </nav>
+
+    <div class="text-center">
+        <div class="spinner-borde" role="status" *ngIf="loadding">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    
+    <h2 class="text-center">Add Customer</h2>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" id="name" [(ngModel)]="customerForm.name">
+        </div>
+
+        <div class="mb-3">
+            <label for="root" class="form-label">Root:</label>
+            <select name="root" id="root" class="form-control" [(ngModel)]="customerForm.root">
+                <option value="sadiqabad">Sadiqabad</option>
+                <option value="Rahim Yar Khan">Rahim Yar Khan</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="textArea" class="form-label">Address:</label>
+            <textarea name="textArea" class="form-control" id="textArea" cols="30" rows="10"
+                [(ngModel)]="customerForm.address"></textarea>
+        </div>
+        <!-- <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> -->
+        <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+    </form>
+</div>

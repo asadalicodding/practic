@@ -1,0 +1,53 @@
+<div class="container">
+    <nav class="mx-2" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add</li>
+        </ol>
+    </nav>
+    <div class="text-center">
+        <div class="spinner-border" role="status" *ngIf="loadding">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <h2 class="text-center">All Customers</h2>
+    <div class="table-responsive">
+        <table class="table ">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Root</th>
+                    <th>Address</th>
+                    <th>Edit </th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of data;let i=index">
+                    <td>{{i + 1}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.root}}</td>
+                    <td>{{item.address}}</td>
+                    <td>
+                        <div>
+                            <button class="btn btn-secondary w-50 " (click)="gotoEditPage(item._id)">
+                                Edit
+                            </button>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div>
+                            <button class="btn btn-danger w-50" (click)="deleteDocument(item._id)">
+                                Delete
+                            </button>
+                        </div>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

@@ -11,11 +11,17 @@ import { FirebaseCrudComponent } from './firebase-crud/firebase-crud/firebase-cr
 import { firebaseConfig } from './helpers/constant';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AddComponent } from './firebase-crud/add/add.component';
+import { DisplayComponent } from './firebase-crud/display/display.component';
+import { DashboardComponent } from './firebase-crud/dashboard/dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
     // CrudOperationComponent,
-    FirebaseCrudComponent
+    FirebaseCrudComponent,
+    AddComponent,
+    DisplayComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
